@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PostPilot Privacy Policy</title>
+<style>
+  /* Layout: single reading column; a data table for what is stored and where. */
+  :root {
+    --bg: #f7f6fb; --fg: #1d1a33; --muted: #5d5878; --accent: #5b3fd6; --line: #e2dff0; --card: #ffffff;
+    --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #15132a; --fg: #ece9fb; --muted: #a9a3c9; --accent: #a894ff; --line: #332f52; --card: #1e1b36; color-scheme: dark; } }
+  :root[data-theme="dark"] { --bg: #15132a; --fg: #ece9fb; --muted: #a9a3c9; --accent: #a894ff; --line: #332f52; --card: #1e1b36; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--body); line-height: 1.6;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; }
+  main { max-width: 680px; margin: 0 auto; }
+  h1 { font-family: var(--display); font-size: 1.9rem; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .meta { color: var(--muted); margin: 0 0 28px; font-size: 0.95rem; }
+  h2 { font-family: var(--display); font-size: 1.1rem; margin: 26px 0 8px; }
+  p { margin: 0 0 10px; max-width: 65ch; }
+  ul { margin: 0 0 10px; padding-left: 22px; display: grid; gap: 6px; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; min-width: 520px; background: var(--card); font-size: 0.95rem; }
+  th, td { text-align: left; padding: 10px 12px; border: 1px solid var(--line); vertical-align: top; }
+  th { font-family: var(--display); font-weight: 500; }
+  a { color: var(--accent); }
+  body{margin:0;font-size:14px}
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  footer { border-top: 1px solid var(--line); margin-top: 30px; padding-top: 14px; color: var(--muted); font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>PostPilot Privacy Policy</h1>
+  <p class="meta">Effective 15 November 2026</p>
+
+  <p>PostPilot is a desktop application that schedules and publishes a user's own videos to social accounts the user connects. This policy explains what information the App handles and where it goes. The short version: everything stays on your computer, and nothing is sent to the App's developer.</p>
+
+  <h2>1. No developer servers</h2>
+  <p>The App has no backend. It does not send analytics, telemetry, account data, tokens or video files to the developer or to any server operated for the App. The developer cannot see your accounts, your content or your posting history.</p>
+
+  <h2>2. Information the App handles, and where it is stored</h2>
+  <div class="scroll">
+  <table>
+    <thead><tr><th>Information</th><th>Why</th><th>Where it is stored</th></tr></thead>
+    <tbody>
+      <tr><td>Video files you put in the App's folder</td><td>To analyze, caption and upload them</td><td>Your computer only</td></tr>
+      <tr><td>Access and refresh tokens for connected accounts (TikTok, YouTube and others)</td><td>To publish to your accounts and read your own post statistics</td><td>A tokens folder next to the App, on your computer</td></tr>
+      <tr><td>Basic profile of the connected TikTok account (display name, avatar, open ID) via the user.info.basic scope</td><td>To show which account is connected</td><td>Your computer only</td></tr>
+      <tr><td>Drafted titles, captions, hashtags, schedule and post results</td><td>To run the schedule and show history</td><td>A local database file next to the App</td></tr>
+      <tr><td>Post statistics for your own published videos (views, likes, comments, shares)</td><td>To learn which posting times work for you</td><td>The same local database</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h2>3. Third-party services the App talks to</h2>
+  <ul>
+    <li><b>Social platforms you connect</b> (TikTok, YouTube, Meta, X, LinkedIn): the App uploads your videos and captions and reads your own post statistics through each platform's official API, under that platform's privacy policy.</li>
+    <li><b>Anthropic (Claude)</b>, if you turn on AI captions: a few still frames and a transcript of each video, plus your niche and brand settings, are sent to Anthropic's API to draft titles and captions, under Anthropic's privacy policy. Account tokens are never sent.</li>
+    <li><b>Speech-model download</b>: on first use the App downloads a speech-recognition model file from Hugging Face so transcription can run on your computer. No audio leaves your computer.</li>
+  </ul>
+
+  <h2>4. TikTok data</h2>
+  <p>Through Login Kit the App receives an access token and the connected account's basic profile. Through the Content Posting API it uploads videos you scheduled, with the privacy level you chose. TikTok data is used only to perform those actions for you. It is not shared with anyone, not sold, and not used for advertising.</p>
+
+  <h2>5. Deleting your data</h2>
+  <p>Disconnecting an account in the App deletes its token from your computer. Deleting the App's folder removes the database, all tokens and all drafted content. You can also revoke the App's access from the platform's own settings, for example TikTok's "Manage app permissions".</p>
+
+  <h2>6. Children</h2>
+  <p>The App is not directed at children under 13 and does not knowingly handle their data.</p>
+
+  <h2>7. Changes</h2>
+  <p>This policy may be updated. The effective date at the top shows the current version.</p>
+
+  <footer>Related: <a href="terms.html">Terms of Service</a></footer>
+</main>
+
+</body>
+</html>

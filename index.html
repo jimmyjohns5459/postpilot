@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500&display=swap">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PostPilot</title>
+<style>
+  /* Layout: one narrow column, a short product header, then plain sections. */
+  :root {
+    --bg: #f7f6fb; --fg: #1d1a33; --muted: #5d5878; --accent: #5b3fd6; --mint: #1f9d7a;
+    --card: #ffffff; --line: #e2dff0;
+    --display: "Space Grotesk", "Inter", system-ui, sans-serif;
+    --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+    --bg: #15132a; --fg: #ece9fb; --muted: #a9a3c9; --accent: #a894ff; --mint: #7ee7c6;
+    --card: #1e1b36; --line: #332f52; color-scheme: dark; } }
+  :root[data-theme="dark"] {
+    --bg: #15132a; --fg: #ece9fb; --muted: #a9a3c9; --accent: #a894ff; --mint: #7ee7c6;
+    --card: #1e1b36; --line: #332f52; color-scheme: dark; }
+  body { background: var(--bg); color: var(--fg); font-family: var(--body); line-height: 1.55;
+    padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 40px 64px; }
+  main { max-width: 680px; margin: 0 auto; display: grid; gap: 36px; }
+  header { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .mark { width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(180deg,#241e5c,#6c3cdc); position: relative; flex: none; }
+  .mark::before { content: ""; position: absolute; left: 24px; top: 18px; border-left: 24px solid #fff; border-top: 14px solid transparent; border-bottom: 14px solid transparent; }
+  h1 { font-family: var(--display); font-size: 2rem; margin: 0; letter-spacing: -0.01em; }
+  .tag { color: var(--muted); margin: 2px 0 0; }
+  h2 { font-family: var(--display); font-size: 1.2rem; margin: 0 0 10px; text-wrap: balance; }
+  p { margin: 0 0 12px; max-width: 65ch; }
+  ol, ul { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+  .row { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 14px; }
+  .cell { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 16px; min-width: 0; }
+  .cell b { display: block; font-family: var(--display); margin-bottom: 4px; }
+  .cell span { color: var(--muted); font-size: 0.95rem; }
+  .pill { display: inline-block; font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--mint); border: 1px solid currentColor; border-radius: 999px; padding: 2px 10px; }
+  footer { color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--line); padding-top: 18px; }
+  a { color: var(--accent); }
+  body{margin:0;font-size:14px}
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="mark" aria-hidden="true"></div>
+    <div>
+      <h1>PostPilot</h1>
+      <p class="tag">Schedule and publish your own short videos, from your desktop.</p>
+    </div>
+  </header>
+
+  <section>
+    <span class="pill">Windows desktop app</span>
+    <p style="margin-top:12px">PostPilot runs on the creator's own computer. You drop video files into a folder, the app drafts a title, caption and hashtags for each clip, picks a posting time, and uploads the video to the social accounts you connected when that time arrives. Nothing is stored on a server. The app, its database and your access tokens live in one folder on your PC.</p>
+  </section>
+
+  <section>
+    <h2>What it does with TikTok</h2>
+    <div class="row">
+      <div class="cell"><b>Connect TikTok</b><span>Opens TikTok's own login page in your browser (Login Kit). You approve once. The app keeps the token on your computer and shows the connected account's name so you can confirm it.</span></div>
+      <div class="cell"><b>Scheduled posting</b><span>At the scheduled time the app uploads the video file from disk through the Content Posting API with the caption and privacy level you chose, then shows the result.</span></div>
+      <div class="cell"><b>Your content only</b><span>PostPilot publishes files you put in the folder, to the account you connected. It never posts on anyone else's behalf and never downloads other people's videos.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>How a post happens</h2>
+    <ol>
+      <li>You add a video to the PostPilot folder and click Analyze &amp; schedule.</li>
+      <li>The app shows the drafted caption, hashtags and posting time. You can edit or delete any of it before it goes out.</li>
+      <li>When the time arrives, the app uploads to the connected account with the privacy setting from your settings.</li>
+      <li>The result and any error appear in the app's log. Disconnecting an account deletes its token from your PC.</li>
+    </ol>
+  </section>
+
+  <footer>
+    Questions or problems: <a href="https://github.com/jimmyjohns5459/postpilot/issues">open an issue on GitHub</a><br>
+    <a href="terms.html">Terms of Service</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a>
+  </footer>
+</main>
+
+</body>
+</html>
